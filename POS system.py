@@ -27,6 +27,7 @@ orderholder= open("order.txt", "a")
 f=0
 txtbx = eztext.Input(maxlength=45, color=(255,255,255), prompt='type here: ')
 name=""
+ghf=""
 #Variables above
 def Backtostart():
     global order
@@ -72,15 +73,27 @@ while running == True:
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
         events = pygame.event.get()
-        print(d)
-        print(x)
         i=0
         qui=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
         if qui == 1:
             Backtostart()        
         while i < len(ordrs):
             hihg=myfont.render(ordrs[i],1,(255,255,255))
-            screen.blit(hihg,(300, i*20+150))
+            screen.blit(hihg,(300, i*25+150))
+            wid=pygame.Surface.get_width(hihg)
+            ghf=ordrs[i]
+            x=pygame.mouse.get_pressed()
+            removeorder=butoonv2.Button(screen,200,200,200,310+wid,i*25+150,120,120,120,d,x,myfont,"Remove Item",255,255,255)
+            if removeorder == 1:
+                with open("order.txt","r+") as f:
+                    t = f.read()
+                    remove=ordrs[i]
+                    f.seek(0)
+                    for line in t.split('\n'):
+                        if line != remove:
+                            f.write(line)
+                    f.truncate()
+                del ordrs[i]
             i = i + 1
         pygame.display.flip()
     help=butoonv2.Button(screen,200,200,200,100,100,120,120,120,d,x,myfont,"sales assistant",255,255,255)
