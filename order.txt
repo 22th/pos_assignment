@@ -1,4 +1,0 @@
-
-['Chilli & Basil Sauce, ', 'Chicken, ', 'Hokkien Noodles'] | 13.5 | 29 | 
-['Teriyaki Sauce, ', 'Chicken, ', 'Hokkien Noodles'] | 12.75 | 76 | alistair
-['Teriyaki Sauce, ', 'Beef, ', 'Hokkien Noodles'] | 12.75 | 76 | testing
