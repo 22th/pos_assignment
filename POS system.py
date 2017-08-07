@@ -48,9 +48,7 @@ def Backtostart():
 while running == True:
     lock.tick(100)
     events = pygame.event.get()
-    # process other events
     for event in events:
-        # close it x button si pressed
         if event.type == pygame.QUIT: 
             running=False
                 
@@ -69,8 +67,6 @@ while running == True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                running == False
         screen.fill((50,205,50))
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
@@ -126,26 +122,31 @@ while running == True:
         f=0
         cvx1=myfont.render(str(order),1,(255,255,255))
         screen.blit(cvx1,(100,100))
-        teriyaki=butoonv2.Button(screen,200,200,200,200,200,60,100,200,d,x,myfont,"Teriyaki $2.75",255,255,255)
-        if teriyaki == 1:
-            ordertotal=ordertotal+2.75
-            running2=True
-            order.append("Teriyaki Sauce, ")
-        chilli_basil=butoonv2.Button(screen,200,200,200,350,200,60,100,200,d,x,myfont,"Chilli & Basil $3.5",255,255,255)
-        if chilli_basil == 1:
-            ordertotal=ordertotal+3.5
-            running2=True
-            order.append("Chilli & Basil Sauce, ")
-        Plum=butoonv2.Button(screen,200,200,200,500,200,60,100,200,d,x,myfont,"Plum $2.5",255,255,255)
-        if Plum == 1:
-            ordertotal=ordertotal+2.5
-            running2=True
-            order.append("Plum Sauce, ")
-        oyster_soy=butoonv2.Button(screen,200,200,200,650,200,60,100,200,d,x,myfont,"Oyster & Soy $3",255,255,255)
-        if oyster_soy == 1:
-            ordertotal=ordertotal+3
-            running2=True
-            order.append("Oyster & Soy Sauce")
+        Hokkien=butoonv2.Button(screen,200,200,200,200,200,60,100,200,d,x,myfont,"Hokkien $6",255,255,255)
+        if Hokkien == 1:
+            ordertotal=ordertotal+6
+            running2=True 
+            order.append("Hokkien Noodles")
+        Egg=butoonv2.Button(screen,200,200,200,350,200,60,100,200,d,x,myfont,"Egg $6.5",255,255,255)
+        if Egg == 1:
+            ordertotal=ordertotal+6.5
+            running2=True   
+            order.append("Egg Noodles")
+        Rice=butoonv2.Button(screen,200,200,200,500,200,60,100,200,d,x,myfont,"Rice $5.75",255,255,255)
+        if Rice == 1:
+            ordertotal=ordertotal+5.75
+            running2=True  
+            order.append("Rice")
+        Flat=butoonv2.Button(screen,200,200,200,650,200,60,100,200,d,x,myfont,"Flat Noodles $7",255,255,255)
+        if Flat == 1:
+            ordertotal=ordertotal+7
+            running2=True   
+            order.append("Flat")
+        Spaghetti=butoonv2.Button(screen,200,200,200,800,200,60,100,200,d,x,myfont,"Spaghetti $5",255,255,255)
+        if Spaghetti == 1:
+            ordertotal=ordertotal+5
+            running2=True 
+            order.append("Spaghetti")
         print(ordertotal)
         quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
         if quit == 1:
@@ -207,31 +208,26 @@ while running == True:
                 screen.blit(xcv1,(500,100))   
                 cvx1=myfont.render(str(order),1,(255,255,255))
                 screen.blit(cvx1,(100,100))                
-                Hokkien=butoonv2.Button(screen,200,200,200,200,400,60,100,200,d,x,myfont,"Hokkien $6",255,255,255)
-                if Hokkien == 1:
-                    ordertotal=ordertotal+6
-                    running4=True 
-                    order.append("Hokkien Noodles")
-                Egg=butoonv2.Button(screen,200,200,200,350,400,60,100,200,d,x,myfont,"Egg $6.5",255,255,255)
-                if Egg == 1:
-                    ordertotal=ordertotal+6.5
-                    running4=True   
-                    order.append("Egg Noodles")
-                Rice=butoonv2.Button(screen,200,200,200,500,400,60,100,200,d,x,myfont,"Rice $5.75",255,255,255)
-                if Rice == 1:
-                    ordertotal=ordertotal+5.75
-                    running4=True  
-                    order.append("Rice")
-                Flat=butoonv2.Button(screen,200,200,200,650,400,60,100,200,d,x,myfont,"Flat Noodles $7",255,255,255)
-                if Flat == 1:
-                    ordertotal=ordertotal+7
-                    running4=True   
-                    order.append("Flat")
-                Spaghetti=butoonv2.Button(screen,200,200,200,800,400,60,100,200,d,x,myfont,"Spaghetti $5",255,255,255)
-                if Spaghetti == 1:
-                    ordertotal=ordertotal+5
-                    running4=True 
-                    order.append("Spaghetti")
+                teriyaki=butoonv2.Button(screen,200,200,200,200,400,60,100,200,d,x,myfont,"Teriyaki $2.75",255,255,255)
+                if teriyaki == 1:
+                    ordertotal=ordertotal+2.75
+                    running4=True
+                    order.append("Teriyaki Sauce, ")
+                chilli_basil=butoonv2.Button(screen,200,200,200,350,400,60,100,200,d,x,myfont,"Chilli & Basil $3.5",255,255,255)
+                if chilli_basil == 1:
+                    ordertotal=ordertotal+3.5
+                    running4=True
+                    order.append("Chilli & Basil Sauce, ")
+                Plum=butoonv2.Button(screen,200,200,200,500,400,60,100,200,d,x,myfont,"Plum $2.5",255,255,255)
+                if Plum == 1:
+                    ordertotal=ordertotal+2.5
+                    running4=True
+                    order.append("Plum Sauce, ")
+                oyster_soy=butoonv2.Button(screen,200,200,200,650,400,60,100,200,d,x,myfont,"Oyster & Soy $3",255,255,255)
+                if oyster_soy == 1:
+                    ordertotal=ordertotal+3
+                    running4=True
+                    order.append("Oyster & Soy Sauce")
                 while running4 == True:
                     lock.tick(100)
                     for event in pygame.event.get():
