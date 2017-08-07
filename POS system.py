@@ -78,11 +78,10 @@ while running == True:
             Backtostart()        
         while i < len(ordrs):
             hihg=myfont.render(ordrs[i],1,(255,255,255))
-            screen.blit(hihg,(200, i*25+150))
+            ycoord= i*25+150
+            screen.blit(hihg,(100, ycoord))
             wid=pygame.Surface.get_width(hihg)
-            ghf=ordrs[i]
-            x=pygame.mouse.get_pressed()
-            removeorder=butoonv2.Button(screen,200,200,200,210+wid,i*25+150,120,120,120,d,x,myfont,"Remove Item",255,255,255)
+            removeorder=butoonv2.Button(screen,200,200,200,110+wid,i*25+150,120,120,120,d,x,myfont,"Remove Item",255,255,255)
             if removeorder == 1:
                 with open("order.txt","r+") as f:
                     t = f.read()
@@ -262,7 +261,7 @@ while running == True:
                             running4=False
                             running5=False
                         if f == 0:
-                            orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.datetime.now()))
+                            orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.datetime.now())+"\n")
                             #orderholder.write(str(ordertotal)+"\n")
                             #orderholder.write(str(v)+"\n")
                             #orderholder.write(str(name)+"\n")
