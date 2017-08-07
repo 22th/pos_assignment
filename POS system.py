@@ -112,8 +112,7 @@ while running == True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                running == False
+                Backtostart()
         screen.fill((50,205,50))
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
@@ -147,7 +146,6 @@ while running == True:
             ordertotal=ordertotal+5
             running2=True 
             order.append("Spaghetti")
-        print(ordertotal)
         quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
         if quit == 1:
             Backtostart()
@@ -157,8 +155,7 @@ while running == True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
-                if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                    running == False
+                    Backtostart()
             screen.fill((50,205,50))
             d=pygame.mouse.get_pos()
             x=pygame.mouse.get_pressed()
@@ -195,13 +192,11 @@ while running == True:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         running = False
-                    if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                        running == False
+                        Backtostart()
                 screen.fill((50,205,50))
                 quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
                 if quit == 1:
-                    Backtostart()
-                                
+                    Backtostart()               
                 d=pygame.mouse.get_pos()
                 x=pygame.mouse.get_pressed()
                 xcv1=myfont.render(str(ordertotal),1,(255,255,255))
@@ -233,8 +228,7 @@ while running == True:
                     for event in pygame.event.get():
                         if event.type == pygame.QUIT:
                             running = False
-                        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                            running == False
+                            Backtostart()
                     screen.fill((50,205,50))
                     d=pygame.mouse.get_pos()
                     x=pygame.mouse.get_pressed()
@@ -251,8 +245,7 @@ while running == True:
                         for event in pygame.event.get():
                             if event.type == pygame.QUIT:
                                 running = False
-                            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                                running == False
+                                Backtostart()
                         screen.fill((50,205,50))
                         d=pygame.mouse.get_pos()
                         x=pygame.mouse.get_pressed()
