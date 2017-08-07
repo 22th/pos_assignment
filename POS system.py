@@ -67,6 +67,7 @@ while running == True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+                Backtostart()
         screen.fill((50,205,50))
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
