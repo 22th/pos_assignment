@@ -72,23 +72,28 @@ while running == True:
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
         events = pygame.event.get()
-        i=0
+        ordrs=[]
+        for i in open("order.txt","r"):
+            ordrs.append(i.strip())               
         qui=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
         if qui == 1:
-            Backtostart()        
+            Backtostart()   
+        i=0
         while i < len(ordrs):
             hihg=myfont.render(ordrs[i],1,(255,255,255))
             ycoord= i*25+150
             screen.blit(hihg,(100, ycoord))
             wid=pygame.Surface.get_width(hihg)
-            removeorder=butoonv2.Button(screen,200,200,200,110+wid,i*25+150,120,120,120,d,x,myfont,"Remove Item",255,255,255)
+            removeorder=0
+            if ordrs[i] != "":
+                removeorder=butoonv2.Button(screen,200,200,200,110+wid,i*25+150,120,120,120,d,x,myfont,"Remove Item",255,255,255)
             if removeorder == 1:
                 with open("order.txt","r+") as f:
                     t = f.read()
                     remove=ordrs[i]
                     f.seek(0)
                     for line in t.split('\n'):
-                        if line != remove and line != "\n":
+                        if line != remove:
                             f.write(line+"\n")
                     f.truncate()
                 del ordrs[i]
