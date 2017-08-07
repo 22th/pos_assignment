@@ -88,7 +88,7 @@ while running == True:
                     remove=ordrs[i]
                     f.seek(0)
                     for line in t.split('\n'):
-                        if line != remove:
+                        if line != remove and line != "\n":
                             f.write(line+"\n")
                     f.truncate()
                 del ordrs[i]
