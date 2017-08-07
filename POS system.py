@@ -89,7 +89,7 @@ while running == True:
                     f.seek(0)
                     for line in t.split('\n'):
                         if line != remove:
-                            f.write(line)
+                            f.write(line+"\n")
                     f.truncate()
                 del ordrs[i]
             i = i + 1
@@ -232,7 +232,7 @@ while running == True:
                     screen.fill((50,205,50))
                     d=pygame.mouse.get_pos()
                     x=pygame.mouse.get_pressed()
-                    New_order=butoonv2.Button(screen,200,200,200,400,400,60,100,200,d,x,myfont,"New order",255,255,255)
+                    New_order=butoonv2.Button(screen,200,200,200,400,420,60,100,200,d,x,myfont,"New order",255,255,255)
                     #order=order.strip()
                     quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
                     if quit == 1:
