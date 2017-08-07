@@ -2,8 +2,8 @@ import pygame
 import random
 import butoonv2
 import eztext
-from datetime import datetime
-str(datetime.now())
+import datetime
+#str(datetime.now())
 pygame.init()
 #rsymonds18@student.sacs.nsw.edu.au
 #Variables below
@@ -272,8 +272,7 @@ while running == True:
                             running4=False
                             running5=False
                         if f == 0:
-                            orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.now())
-)
+                            orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.datetime.now()))
                             #orderholder.write(str(ordertotal)+"\n")
                             #orderholder.write(str(v)+"\n")
                             #orderholder.write(str(name)+"\n")
