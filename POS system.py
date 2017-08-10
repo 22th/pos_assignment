@@ -51,7 +51,6 @@ while running == True:
     for event in events:
         if event.type == pygame.QUIT: 
             running=False
-                
     d=pygame.mouse.get_pos()
     x=pygame.mouse.get_pressed()
     screen.fill((50,205,50))
@@ -59,7 +58,7 @@ while running == True:
     ordrs=[]
     for i in open("order.txt","r"):
         ordrs.append(i.strip())       
-    chef=butoonv2.Button(screen,200,200,200,400,100,120,120,120,d,x,myfont,"Chef",255,255,255)
+    chef=butoonv2.Button(screen,200,200,200,100,200,120,120,120,d,x,myfont,"Chef",255,255,255)
     if chef == 1:
         crunning1=True
     while crunning1 == True:
