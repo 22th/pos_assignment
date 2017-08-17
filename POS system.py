@@ -51,6 +51,7 @@ while running == True:
     for event in events:
         if event.type == pygame.QUIT: 
             running=False
+            
     d=pygame.mouse.get_pos()
     x=pygame.mouse.get_pressed()
     screen.fill((50,205,50))
@@ -61,6 +62,7 @@ while running == True:
     chef=butoonv2.Button(screen,200,200,200,100,200,120,120,120,d,x,myfont,"Chef",255,255,255)
     if chef == 1:
         crunning1=True
+    #print(chef)
     while crunning1 == True:
         lock.tick(100)
         for event in pygame.event.get():
@@ -130,22 +132,22 @@ while running == True:
             ordertotal=ordertotal+6
             running2=True 
             order.append("Hokkien Noodles")
-        Egg=butoonv2.Button(screen,200,200,200,350,200,60,100,200,d,x,myfont,"Egg $6.5",255,255,255)
+        Egg=butoonv2.Button(screen,200,200,200,200,250,60,100,200,d,x,myfont,"Egg $6.5",255,255,255)
         if Egg == 1:
             ordertotal=ordertotal+6.5
             running2=True   
             order.append("Egg Noodles")
-        Rice=butoonv2.Button(screen,200,200,200,500,200,60,100,200,d,x,myfont,"Rice $5.75",255,255,255)
+        Rice=butoonv2.Button(screen,200,200,200,200,300,60,100,200,d,x,myfont,"Rice $5.75",255,255,255)
         if Rice == 1:
             ordertotal=ordertotal+5.75
             running2=True  
             order.append("Rice")
-        Flat=butoonv2.Button(screen,200,200,200,650,200,60,100,200,d,x,myfont,"Flat Noodles $7",255,255,255)
+        Flat=butoonv2.Button(screen,200,200,200,200,350,60,100,200,d,x,myfont,"Flat Noodles $7",255,255,255)
         if Flat == 1:
             ordertotal=ordertotal+7
             running2=True   
             order.append("Flat")
-        Spaghetti=butoonv2.Button(screen,200,200,200,800,200,60,100,200,d,x,myfont,"Spaghetti $5",255,255,255)
+        Spaghetti=butoonv2.Button(screen,200,200,200,200,400,60,100,200,d,x,myfont,"Spaghetti $5",255,255,255)
         if Spaghetti == 1:
             ordertotal=ordertotal+5
             running2=True 
@@ -171,22 +173,22 @@ while running == True:
             if quit == 1:
                 Backtostart()
                         
-            beef=butoonv2.Button(screen,200,200,200,200,300,60,100,200,d,x,myfont,"Beef $4",255,255,255)
+            beef=butoonv2.Button(screen,200,200,200,300,200,60,100,200,d,x,myfont,"Beef $4",255,255,255)
             if beef == 1:
                 ordertotal=ordertotal+4
                 running3=True
                 order.append("Beef, ")
-            chicken=butoonv2.Button(screen,200,200,200,350,300,60,100,200,d,x,myfont,"Chicken $4",255,255,255)
+            chicken=butoonv2.Button(screen,200,200,200,300,250,60,100,200,d,x,myfont,"Chicken $4",255,255,255)
             if chicken == 1:
                 ordertotal=ordertotal+4
                 running3=True
                 order.append("Chicken, ")
-            fish=butoonv2.Button(screen,200,200,200,500,300,60,100,200,d,x,myfont,"Fish $5",255,255,255)
+            fish=butoonv2.Button(screen,200,200,200,300,300,60,100,200,d,x,myfont,"Fish $5",255,255,255)
             if fish == 1:
                 ordertotal=ordertotal+5
                 running3=True 
                 order.append("Fish, ")
-            Tofu=butoonv2.Button(screen,200,200,200,650,300,60,100,200,d,x,myfont,"Tofu $3.5",255,255,255)
+            Tofu=butoonv2.Button(screen,200,200,200,300,350,60,100,200,d,x,myfont,"Tofu $3.5",255,255,255)
             if Tofu == 1:
                 ordertotal=ordertotal+3.5
                 running3=True
@@ -207,22 +209,22 @@ while running == True:
                 screen.blit(xcv1,(500,100))   
                 cvx1=myfont.render(str(order),1,(255,255,255))
                 screen.blit(cvx1,(100,100))                
-                teriyaki=butoonv2.Button(screen,200,200,200,200,400,60,100,200,d,x,myfont,"Teriyaki $2.75",255,255,255)
+                teriyaki=butoonv2.Button(screen,200,200,200,400,200,60,100,200,d,x,myfont,"Teriyaki $2.75",255,255,255)
                 if teriyaki == 1:
                     ordertotal=ordertotal+2.75
                     running4=True
                     order.append("Teriyaki Sauce, ")
-                chilli_basil=butoonv2.Button(screen,200,200,200,350,400,60,100,200,d,x,myfont,"Chilli & Basil $3.5",255,255,255)
+                chilli_basil=butoonv2.Button(screen,200,200,200,400,250,60,100,200,d,x,myfont,"Chilli & Basil $3.5",255,255,255)
                 if chilli_basil == 1:
                     ordertotal=ordertotal+3.5
                     running4=True
                     order.append("Chilli & Basil Sauce, ")
-                Plum=butoonv2.Button(screen,200,200,200,500,400,60,100,200,d,x,myfont,"Plum $2.5",255,255,255)
+                Plum=butoonv2.Button(screen,200,200,200,400,300,60,100,200,d,x,myfont,"Plum $2.5",255,255,255)
                 if Plum == 1:
                     ordertotal=ordertotal+2.5
                     running4=True
                     order.append("Plum Sauce, ")
-                oyster_soy=butoonv2.Button(screen,200,200,200,650,400,60,100,200,d,x,myfont,"Oyster & Soy $3",255,255,255)
+                oyster_soy=butoonv2.Button(screen,200,200,200,400,350,60,100,200,d,x,myfont,"Oyster & Soy $3",255,255,255)
                 if oyster_soy == 1:
                     ordertotal=ordertotal+3
                     running4=True
@@ -294,5 +296,3 @@ while running == True:
             pygame.display.flip()
         pygame.display.flip() 
     pygame.display.flip()
-
-
