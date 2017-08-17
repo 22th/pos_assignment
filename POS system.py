@@ -293,3 +293,5 @@ while running == True:
             pygame.display.flip()
         pygame.display.flip() 
     pygame.display.flip()
+for name in vars().keys():
+    print(name)
