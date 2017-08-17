@@ -268,9 +268,6 @@ while running == True:
                             running5=False
                         if f == 0:
                             orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.datetime.now())+"\n")
-                            #orderholder.write(str(ordertotal)+"\n")
-                            #orderholder.write(str(v)+"\n")
-                            #orderholder.write(str(name)+"\n")
                             orderholder.close()
                             f=f+1
                         xcv1=myfont.render(str(v),1,(255,255,255))
