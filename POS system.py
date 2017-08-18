@@ -59,7 +59,7 @@ while running == True:
     ordrs=[]
     for i in open("order.txt","r"):
         ordrs.append(i.strip())       
-    chef=butoonv2.Button(screen,200,200,200,100,200,120,120,120,d,x,myfont,"Chef",255,255,255)
+    chef=butoonv2.Button(screen,200,200,200,100,300,120,120,120,d,x,myfont,"Chef                                                                 ",255,255,255)
     if chef == 1:
         crunning1=True
     #print(chef)
@@ -100,7 +100,7 @@ while running == True:
                 del ordrs[i]
             i = i + 1
         pygame.display.flip()
-    help=butoonv2.Button(screen,200,200,200,100,100,120,120,120,d,x,myfont,"sales assistant",255,255,255)
+    help=butoonv2.Button(screen,200,200,200,100,100,120,120,120,d,x,myfont,"sales assistant                                                ",255,255,255)
     quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
     txtbx.update(events)
     # blit txtbx on the sceen
@@ -238,7 +238,7 @@ while running == True:
                     screen.fill((50,205,50))
                     d=pygame.mouse.get_pos()
                     x=pygame.mouse.get_pressed()
-                    New_order=butoonv2.Button(screen,200,200,200,400,420,60,100,200,d,x,myfont,"New order",255,255,255)
+                    New_order=butoonv2.Button(screen,200,200,200,400,420,60,100,200,d,x,myfont,"New Order",255,255,255)
                     #order=order.strip()
                     quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
                     if quit == 1:
@@ -266,6 +266,7 @@ while running == True:
                             running3=False
                             running4=False
                             running5=False
+                            
                         if f == 0:
                             orderholder.write(str(order)+" | "+str(ordertotal)+" | "+str(v)+" | "+str(name) +" | "+str(datetime.datetime.now())+"\n")
                             orderholder.close()
