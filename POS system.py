@@ -29,7 +29,6 @@ orderholder= open("order.txt", "a")
 f=0
 txtbx = eztext.Input(maxlength=45, color=(255,255,255), prompt='type here: ')
 name=""
-ghf=""
 #Variables above
 def Backtostart():
     global order
