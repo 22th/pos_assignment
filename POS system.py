@@ -53,7 +53,7 @@ while running == True:
             
     d=pygame.mouse.get_pos()
     x=pygame.mouse.get_pressed()
-    screen.fill((50,205,50))
+    screen.fill((200,205,200))
     order=[]
     ordrs=[]
     for i in open("order.txt","r"):
@@ -68,7 +68,7 @@ while running == True:
             if event.type == pygame.QUIT:
                 running = False
                 Backtostart()
-        screen.fill((50,205,50))
+        screen.fill((200,205,200))
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
         events = pygame.event.get()
@@ -118,7 +118,7 @@ while running == True:
             if event.type == pygame.QUIT:
                 running = False
                 Backtostart()
-        screen.fill((50,205,50))
+        screen.fill((200,205,200))
         d=pygame.mouse.get_pos()
         x=pygame.mouse.get_pressed()
         xcv1=myfont.render(str(ordertotal),1,(255,255,255))
@@ -161,7 +161,7 @@ while running == True:
                 if event.type == pygame.QUIT:
                     running = False
                     Backtostart()
-            screen.fill((50,205,50))
+            screen.fill((200,205,200))
             d=pygame.mouse.get_pos()
             x=pygame.mouse.get_pressed()
             xcv1=myfont.render(str(ordertotal),1,(255,255,255))
@@ -198,7 +198,7 @@ while running == True:
                     if event.type == pygame.QUIT:
                         running = False
                         Backtostart()
-                screen.fill((50,205,50))
+                screen.fill((200,205,200))
                 quit=butoonv2.Button(screen,200,200,200,10,10,120,120,120,d,x,myfont,"QUIT",255,255,255)
                 if quit == 1:
                     Backtostart()               
@@ -234,7 +234,7 @@ while running == True:
                         if event.type == pygame.QUIT:
                             running = False
                             Backtostart()
-                    screen.fill((50,205,50))
+                    screen.fill((200,205,200))
                     d=pygame.mouse.get_pos()
                     x=pygame.mouse.get_pressed()
                     New_order=butoonv2.Button(screen,200,200,200,400,420,60,100,200,d,x,myfont,"New Order",255,255,255)
